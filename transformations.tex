@@ -1,4 +1,6 @@
 \documentclass[]{jreport}
+\usepackage{amsmath, amssymb}
+\usepackage{type1cm}
 \begin{document}
 
 \part{はじめに}
@@ -33,6 +35,26 @@ $x$ $\ll$ 1のとき,
 
 \section{6分の1公式}
 \section{12分の1公式}
+
+\part{数学の簡便な結論を纏めた章}
+\chapter{微分方程式}
+\section{常微分方程式}
+\subsection{定数係数2階線形微分方程式}
+
+$a$, $b$を実定数とし, 2階斉次微分方程式$y''+ay'+by=0$を考える.特性方程式$\lambda^2+a\lambda+b=0$の2根を$\lambda_{1}$, $\lambda_{2}$とする. このとき, 一般解$y(x)$は, $C_{1}$, $C_{2}$を任意定数として, \\
+\begin{equation}
+    y(x)= \left \{
+        \begin{array}{l}
+            C_{1}e^{\lambda_{1} t}+C_{2}e^{\lambda_{2} t}\\
+            \ \ when \ \lambda_{1}\neq\lambda_{2}, (\lambda_{1}, \lambda_{2}\in\mathbb{R}) \\
+            C_{1}e^{\lambda_{1} t}+C_{2}te^{\lambda_{1} t}\\
+            \ \ when \ \lambda_{1}=\lambda_{2} \\
+            e^{\alpha t}(C_{1}cos{\beta t}+C_{2}sin{\beta t}) \\
+            \ \ when \ \lambda_{1}=\alpha+{i\beta}, \lambda_{2}=\alpha-{i\beta}, (\alpha, \beta\in\mathbb{R}, \beta>0)
+        \end{array}
+    \right.
+\end{equation}
+で与えられる.
 
 \part{物理学の章}
 \chapter{物理量}
