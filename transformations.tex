@@ -1,13 +1,18 @@
-\documentclass[a4paper]{report}
-\usepackage{amsmath, amssymb}
-\usepackage{type1cm}
-\usepackage{bm}
-\begin{document}
+\documentclass[a4paper, 12pt]{jsreport}
+\input preemble.tex
+\input title.tex
 
-\part{はじめに}
-piyopiyo
-\chapter{概要}
-この文書では私がよく使うくせに, 自己の記憶媒体に中々収まりきらない式変形等をまとめたものである.
+% prevent hyphenation
+\hyphenpenalty=10000\relax
+\exhyphenpenalty=10000\relax
+\sloppy
+
+\begin{document}
+\maketitle
+
+\input preface.tex
+
+\tableofcontents
 
 \part{数学定義の章}
 \chapter{線形代数}
@@ -94,11 +99,11 @@ $a$, $b$を実定数とし, 2階斉次微分方程式$y''+ay'+by=0$を考える.
     y(x)= \left \{
         \begin{array}{l}
             C_{1}e^{\lambda_{1} t}+C_{2}e^{\lambda_{2} t}\\
-            \ \ when \ \lambda_{1}\neq\lambda_{2}, (\lambda_{1}, \lambda_{2}\in\mathbb{R}) \\
+            \ \ \mathrm{when} \ \lambda_{1}\neq\lambda_{2}, (\lambda_{1}, \lambda_{2}\in\mathbb{R}) \\
             C_{1}e^{\lambda_{1} t}+C_{2}te^{\lambda_{1} t}\\
-            \ \ when \ \lambda_{1}=\lambda_{2} \\
+            \ \ \mathrm{when} \ \lambda_{1}=\lambda_{2} \\
             e^{\alpha t}(C_{1}cos{\beta t}+C_{2}sin{\beta t}) \\
-            \ \ when \ \lambda_{1}=\alpha+{i\beta}, \lambda_{2}=\alpha-{i\beta}, (\alpha, \beta\in\mathbb{R}, \beta>0)
+            \ \ \mathrm{when} \ \lambda_{2}=\alpha+{i\beta}, \lambda_{2}=\alpha-{i\beta}, (\alpha, \beta\in\mathbb{R}, \beta>0)
         \end{array}
     \right.
 \end{equation}
