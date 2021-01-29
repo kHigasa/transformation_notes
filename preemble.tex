@@ -23,3 +23,19 @@
 \tcbuselibrary{theorems, skins}
 \usepackage{ascmac}
 \usepackage[numbers, sort]{natbib}
+
+\newtheoremstyle{mystyle}%   % スタイル名
+    {}%                      % 上部スペース
+    {}%                      % 下部スペース
+    {\normalfont}%           % 本文フォント
+    {}%                      % インデント量
+    {\bf}%                   % 見出しフォント
+    {}%                      % 見出し後の句読点, '.'
+    {\newline}%              % 見出し後のスペース, ' ' or \newline
+    {\thmname{#1}\thmnumber{#2}\thmnote{（#3）}}% % 見出しの書式 (can be left empty, meaning `normal')
+\theoremstyle{mystyle}
+\newtheorem{theo}{Th.}[section]
+\newtheorem{dfn}[theo]{Def.}
+\newtheorem{prop}[theo]{Prop.}
+\newtheorem{lemma}[theo]{Lem.}
+\newtheorem{cor}[theo]{Cor.}
