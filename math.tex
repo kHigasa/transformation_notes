@@ -2,7 +2,43 @@
 \label{prt:数学}
 \chapter*{算数} % (fold)
 \label{cha:算数}
+\begin{align}
+    (\cot x)' &= -\frac{1}{\sin^2x} \\
+    \text{cf. }(\tan x)' &= \frac{1}{\cos^2x}\notag
+\end{align}
+note: 適当な微分. 
+\begin{equation}
+\label{不定積分1}
+    \int\frac{1}{\sqrt{x^2+A}}\dd{x} = \log(x+\sqrt{x^2+A})+\text{const. }(A>0)
+\end{equation}
+note: 被積分函数分母の双曲線を見て$x=\sqrt{A}\sinh t$と置換, なんて気怠いことはしない. 
+\begin{align}
+\label{逆双曲線関数}
+    \mathrm{arcsinh}\ x &= \log(x+\sqrt{x^2+1}) \\
+    \text{cf. }\mathrm{arccosh}\ x &= \log(x\pm\sqrt{x^2-1})\notag
+\end{align}
+note: 逆双曲線函数が現れる奇妙さを覚えておくのもいい. 
+\begin{align}
+\label{不定積分2}
+    \int\frac{1}{\sqrt{a^2-x^2}}\dd{x} &= \arcsin\frac{x}{a}+\text{const.} \\
+    \text{cf. }\int\frac{1}{x^2+a^2}\dd{x} &= \frac{1}{a}\arctan\frac{x}{a}+\text{const.}\notag
+\end{align}
+note: 三角関数についても全く同様. 
+\begin{align}
+    \int\sqrt{x^2+A}\dd{x} &= \frac{1}{2}\qty(x\sqrt{x^2+A}+A\log(x+\sqrt{x^2+A}))+\text{const. }(A>0) \\
+    \int\sqrt{a^2-x^2}\dd{x} &= \frac{1}{2}\qty(x\sqrt{a^2-x^2}+a^2\arcsin\frac{x}{a})+\text{const.}
+\end{align}
+note: 不定積分(\ref{不定積分1})と(\ref{不定積分2})のまとめ的なものとして. 
 
+$a,b,c,d,e,f\in\mathbb{Z}$, $p,q,r,\alpha,\beta,\gamma\in\mathbb{Q}$として, 
+\begin{align}
+    \frac{px+q}{(ax+b)(cx+d)} &= \frac{\alpha}{ax+b}+\frac{\beta}{cx+d} \\
+    \frac{px+q}{(ax+b)^2} &= \frac{\alpha}{ax+b}+\frac{\beta}{(ax+b)^2} \\
+    \frac{px^2+qx+r}{(ax+b)(cx+d)(ex+f)} &= \frac{\alpha}{ax+b}+\frac{\beta}{cx+d}+\frac{\gamma}{ex+f} \\
+    \frac{px^2+qx+r}{(ax+b)^2(cx+d)} &= \frac{\alpha}{ax+b}+\frac{\beta}{(ax+b)^2}+\frac{\gamma}{cx+d} \\
+    \frac{px^2+qx+r}{(ax+b)(cx^2+dx+e)} &= \frac{\alpha}{ax+b}+\frac{\beta x+\gamma}{cx^2+dx+e}
+\end{align}
+note: 部分分数分解. 
 % chapter 算数 (end)
 
 \chapter{線形代数} % (fold)
